@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z-Index Example</title>
+<style>
+    .container {
+        position: relative; /* Establishing a stacking context */
+    }
+    .box {
+        position: absolute; /* or position: relative; */
+        width: 100px;
+        height: 100px;
+        background-color: #f00;
+    }
+    .box1 {
+        z-index: 1; /* Stacking above other boxes */
+    }
+    .box2 {
+        z-index: 2; /* Stacking above box1 */
+        left: 20px;
+        top: 20px;
+        background-color: #0f0;
+    }
+    .box3 {
+        z-index: -1; /* Stacking below other boxes */
+        left: 40px;
+        top: 40px;
+        background-color: #00f;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</div>
+</body>
+</html>
